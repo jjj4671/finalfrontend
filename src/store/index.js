@@ -1,0 +1,12 @@
+import { combineReducers, applyMiddleware, legacy_createStore as createStore } from 'redux';
+import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
+
+import * as reducers from './reducers';
+
+// Construct our Redux store;
+const rootReducer = combineReducers(reducers);
+const logger = createLogger({ collapsed: true });
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
+
+export default store;
