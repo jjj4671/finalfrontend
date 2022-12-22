@@ -28,6 +28,13 @@ export const addEmployee = (employee) => {
   };
 };
 
+export const deleteEmployee = (employee) => {
+  return {
+    type: at.DELETE_EMPLOYEE,
+    payload: employee,
+  };
+};
+
 //All tasks
 export const fetchAllTasks = (tasks) => {
   return {

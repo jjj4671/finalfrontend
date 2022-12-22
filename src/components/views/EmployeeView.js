@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const EmployeeView = (props) => {
-  const { employee, editTask, allTasks } = props;
+  const { employee, editTask, allTasks, deleteEmployee } = props;
   let assignedTasks = allTasks.filter(task => task.employeeId === employee.id);
   let availableTasks = allTasks.filter(task => task.employeeId !== employee.id);
 
@@ -13,6 +13,7 @@ const EmployeeView = (props) => {
       <Link to={`/editemployee/${employee.id}`}>
         <h4>Edit Employee</h4>
       </Link>
+      <button onClick={() => deleteEmployee(employee.id)}>Delete Employee</button>
       <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
         <div>Assigned tasks:
         {assignedTasks.map(task => {

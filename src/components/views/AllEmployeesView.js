@@ -38,14 +38,16 @@ import NewEmployeeView from '../views/NewEmployeeView';
 
 const AllEmployeesView = (props) => {
   if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>
+    return <div>There are no employees.
+      <Link to={`/newemployee`}>
+        <button>Add New Employee</button>
+      </Link>
+    </div>
+
   }
 
   return (
     <div>
-      <Link to={`/newemployee`}>
-        <button>Add New Employee</button>
-      </Link>
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + ' ' + employee.lastname;
         return (
