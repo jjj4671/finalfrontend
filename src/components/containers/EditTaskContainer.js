@@ -72,8 +72,8 @@ class EditTaskContainer extends Component {
         <input type="text" name="priority" value={this.state.priority} onChange={(e) => this.handleChange(e)} />
         <br />
 
-        <label style={{ color: '#11153e', fontWeight: 'bold' }}>employeeId: </label>
-        <input type="text" name="employeeId" value={this.state.employeeId} onChange={(e) => this.handleChange(e)} />
+        <label style={{ color: '#11153e', fontWeight: 'bold' }}>completion status: </label>
+        <input type="text" name="completion_status" value={this.state.employeeId} onChange={(e) => this.handleChange(e)} />
         <br />
 
         <button type="submit">
