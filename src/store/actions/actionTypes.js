@@ -3,6 +3,8 @@
 //All campuses
 export const FETCH_ALL_EMPLOYEES = "FETCH_ALL_EMPLOYEES";
 export const EDIT_EMPLOYEE = "EDIT EMPLOYEE";
+export const ADD_EMPLOYEE = "ADD EMPLOYEE";
+
 
 //Single campus
 export const FETCH_EMPLOYEE = "FETCH_EMPLOYEE";
